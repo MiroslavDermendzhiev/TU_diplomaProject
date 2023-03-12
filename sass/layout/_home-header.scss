@@ -1,0 +1,47 @@
+header {
+  text-align: center;
+
+  .logo {
+    height: 63px;
+    box-shadow: 0px 1px 5px 0.5px #bebebe;
+    position: relative;
+    z-index: 10;
+    &-img {
+      width: 165px;
+      margin-top: 23px;
+    }
+  }
+  .location {
+    background: $clr-bckgr--secondary;
+    color: $text-clr--light;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .fa-location-dot {
+      position: relative;
+      right: 17px;
+      font-size: 17px;
+    }
+  }
+  .intro {
+    background: $clr-bckgr--primary;
+    height: 290px;
+    &-title {
+      margin: 0px;
+      font-size: 24px;
+      font-weight: 900;
+      padding-top: 40px;
+    }
+    &-paragraph {
+      width: 306px;
+      margin: 0px auto;
+      font-size: 18px;
+      color: $text-clr--light;
+      padding-top: 40px;
+    }
+    &-btn {
+      @include gredient-button;
+    }
+  }
+}

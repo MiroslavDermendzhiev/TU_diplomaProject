@@ -1,0 +1,41 @@
+@mixin loading-spinner {
+  .loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: hide 0s 2s forwards;
+    z-index: 10000;
+    background: rgb(233, 233, 233, 0.5);
+  }
+
+  .loader::after {
+    content: "";
+    width: 55px;
+    height: 55px;
+    border: 15px solid transparent;
+    border-top-color: #383838;
+    border-radius: 50%;
+    animation: loading 1s ease infinite;
+  }
+  @keyframes loading {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  @keyframes hide {
+    from {
+      transform: scale(1);
+    }
+    to {
+      transform: scale(0);
+    }
+  }
+}

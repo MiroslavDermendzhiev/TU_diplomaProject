@@ -1,0 +1,7 @@
+* {
+  font-family: $text-font;
+}
+@include loading-spinner;
+@import "../layout/home-header";
+@import "../layout/home-main";
+@include footer;

@@ -1,0 +1,90 @@
+@mixin gredient-button {
+  margin-top: 30px;
+  height: 50px;
+  width: 220px;
+  border: 3px hidden #d8d8d8;
+  border-radius: 50px;
+  color: white;
+  background: linear-gradient(355deg, $clr-primary 0%, $clr-secondary 100%);
+  box-shadow: 0px 3px 8px 0px #808080d1;
+  transition: box-shadow 0.5s, opacity 0.5s;
+  cursor: pointer;
+  &:hover {
+    box-shadow: 0px 5px 10px 5px rgb(128 128 128 / 82%);
+    opacity: 0.9;
+  }
+}
+
+@mixin heart {
+  .restaurants-cards--heart_container {
+    &_icon {
+      transform: scale(1.4, 1.6);
+      position: absolute;
+    }
+    .fa-solid {
+      opacity: 0;
+      transition: opacity 500ms;
+    }
+  }
+  div.restaurants-cards--heart_container:hover {
+    .fa-solid {
+      opacity: 1;
+      background: -webkit-linear-gradient(
+        270deg,
+        $clr-primary 0%,
+        $clr-secondary 100%
+      );
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+}
+
+@mixin animation-menu_loading {
+  .menu-content-buttons {
+    opacity: 0;
+    animation: menu-loading 2s 0s forwards;
+  }
+  @keyframes menu-loading {
+    from {
+      transform: translateY(20px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0px);
+      opacity: 1;
+    }
+  }
+  .first-content-btn {
+    animation-delay: 0.2s;
+  }
+  .second-content-btn {
+    animation-delay: 0.4s;
+  }
+  .third-content-btn {
+    animation-delay: 0.6s;
+  }
+  .forth-content-btn {
+    animation-delay: 0.8s;
+  }
+}
+
+@mixin checkmark {
+  transition: width 0.5s ease-out;
+}
+
+@mixin checkmark-rotate {
+  .checkmark-container--icon {
+    transform: rotate(0);
+    animation: rotation 0.5s 0s forwards;
+  }
+  @keyframes rotation {
+    from {
+      transform: rotate(0);
+    }
+    to {
+      transform: rotate(2turn);
+    }
+  }
+}

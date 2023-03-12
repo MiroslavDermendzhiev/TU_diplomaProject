@@ -1,0 +1,54 @@
+@mixin footer {
+  footer {
+    background: $clr-bckgr--footer;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 200px;
+    padding-right: 155px;
+    @include desktop-only {
+      padding: 25px 0px;
+      height: 60px;
+    }
+    .nav-title {
+      font-family: $title-font;
+      margin-right: 70px;
+      font-size: 18px;
+      font-weight: 100;
+      margin-top: 25px;
+      margin-bottom: 5px;
+      @include desktop-only {
+        margin: 0;
+      }
+    }
+    .nav {
+      &-list {
+        list-style: none;
+        padding: 0px;
+        @include desktop-only {
+          display: flex;
+          gap: 80px;
+        }
+        &--item {
+          margin-bottom: 8px;
+          @include desktop-only {
+            display: inline-block;
+          }
+          i {
+            font-size: 13px;
+            margin-right: 10px;
+          }
+          i.fa-handshake-angle {
+            transform: scale(0.7, 1);
+            margin-right: 6px;
+          }
+          a {
+            text-decoration: none;
+            color: white;
+          }
+        }
+      }
+    }
+  }
+}

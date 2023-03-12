@@ -1,0 +1,158 @@
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  counter-reset: steps-number;
+  .steps {
+    font-weight: 700;
+    height: 380px;
+    padding: 30px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 27px;
+    @include desktop-only {
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-content: center;
+      height: auto;
+      padding: 40px 40px;
+    }
+    @include tablet-only {
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-content: center;
+      height: auto;
+      padding: 40px 40px;
+    }
+    &-title {
+      margin-top: 15px;
+      margin-bottom: 5px;
+      font-weight: 800;
+      @include desktop-only {
+        width: 100%;
+        text-align: center;
+        margin-top: 0px;
+      }
+      @include tablet-only {
+        width: 100%;
+        text-align: center;
+        margin-top: 0px;
+      }
+    }
+    &-first,
+    &-second,
+    &-third {
+      background: $clr-bckgr--primary;
+      width: 320px;
+      height: 70px;
+      display: flex;
+      align-items: center;
+      margin-left: 10px;
+      border-radius: 20px;
+      box-shadow: $shadow-steps;
+      &--icon {
+        margin: 0px 26px 0px 10px;
+        width: 14px;
+        padding-left: 0px;
+        font-size: 18px;
+        color: rgba(46, 46, 46, 0.55);
+        fill: transparent;
+        stroke: $clr-primary;
+      }
+      &::before {
+        counter-increment: steps-number;
+        content: counter(steps-number);
+        background: $clr-primary;
+        color: white;
+        position: relative;
+        font-size: 13.5px;
+        font-weight: 400;
+        width: 16px;
+        height: 18px;
+        padding-left: 8px;
+        padding-top: 6px;
+        border-radius: 15px;
+        right: 13px;
+      }
+    }
+    &-third {
+      background-color: rgba(147, 86, 220, 0.1);
+      margin-bottom: 40px;
+      @include desktop-only {
+        margin-bottom: 0px;
+      }
+      @include tablet-only {
+        margin-bottom: 0px;
+      }
+      &--icon {
+        color: $clr-primary;
+      }
+    }
+  }
+  .restaurants {
+    height: 1230px;
+    width: 100%;
+    background: $clr-bckgr--primary;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    @include desktop-only {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-content: center;
+      height: auto;
+      padding: 40px 0px;
+    }
+    @include tablet-only {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-content: center;
+      height: auto;
+      padding: 40px 0px;
+    }
+    &-title {
+      margin-right: 203px;
+      margin-top: 55px;
+      margin-bottom: 0px;
+      font-weight: 800;
+      @include desktop-only {
+        width: 100%;
+        text-align: center;
+        margin: auto;
+        margin-bottom: 10px;
+      }
+      @include tablet-only {
+        width: 100%;
+        text-align: center;
+        margin: auto;
+        margin-bottom: 10px;
+      }
+    }
+    &-cards {
+      @include cards-properties;
+    }
+    &-le_gourmand,
+    &-bastille,
+    &-the_full_palette,
+    &-the_enchanted_plate {
+      .restaurants-cards--heart_container {
+        bottom: 53px;
+      }
+    }
+    &-the_enchanted_plate {
+      img {
+        transform: scale(1.02);
+        object-position: 0px -151px;
+      }
+    }
+    &-le_gourmand {
+      img {
+        transform: scale(1.02);
+      }
+    }
+  }
+}

@@ -1,0 +1,60 @@
+@mixin cards-properties {
+  background: white;
+  height: 250px;
+  width: 334px;
+  overflow: hidden;
+  text-decoration: none;
+  color: black;
+  border-radius: 15px;
+  box-shadow: $shadow-cards;
+  transition: transform 0.5s;
+
+  &--img {
+    transform: scale(1.04);
+    height: 170px;
+    width: 100%;
+    object-fit: cover;
+    object-position: bottom;
+  }
+  &--name {
+    padding-left: 12px;
+    margin-bottom: 4px;
+    margin-top: 17px;
+    font-size: 18px;
+    font-weight: 800;
+  }
+  &--location {
+    padding-left: 12px;
+    margin-top: 0px;
+    font-size: 17px;
+  }
+  &--new {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: $clr-tertiary;
+    color: darken($clr-tertiary, 38);
+    width: 80px;
+    height: 28px;
+    position: relative;
+    left: 242px;
+    bottom: 239px;
+    border-radius: 2px;
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+  .restaurants-cards--heart_container {
+    height: 27px;
+    width: 23px;
+    position: relative;
+    bottom: 82px;
+    left: 290px;
+  }
+  @include heart;
+
+  &:hover {
+    // scale: 1.05;
+    transform: scale(1.05);
+  }
+}

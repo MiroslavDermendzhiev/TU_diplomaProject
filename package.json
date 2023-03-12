@@ -1,0 +1,21 @@
+{
+  "name": "original-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/main.scss:./css/main.css",
+    "prefix": "postcss ./css/main.css --use autoprefixer -d ./css/prefixed/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MiroslavDermendzhiev/project-3.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "browserslist": "last 4 versions",
+  "bugs": {
+    "url": "https://github.com/MiroslavDermendzhiev/project-3/issues"
+  },
+  "homepage": "https://github.com/MiroslavDermendzhiev/project-3#readme"
+}

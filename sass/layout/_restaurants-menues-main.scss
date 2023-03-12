@@ -1,0 +1,203 @@
+.restaurants-main {
+  height: 1407px;
+  @include tablet-only {
+    height: 1100px;
+  }
+  @include desktop-only {
+    height: 770px;
+  }
+  &--img_div {
+    overflow: hidden;
+    position: absolute;
+    @include desktop-only {
+      max-height: 770px;
+    }
+    &--main_img {
+      width: 100%;
+      object-position: 0px 11px;
+      transform: scale(1.1);
+    }
+  }
+
+  .menu {
+    height: 1187px;
+    @include tablet-only {
+      height: 880px;
+    }
+    @include desktop-only {
+      height: 550px;
+      max-width: 1150px;
+    }
+    background: $clr-bckgr--primary;
+    position: relative;
+    border-radius: 40px 40px 0px 0px;
+    top: 220px;
+    width: 375px;
+    @include tablet-only {
+      width: 769px;
+    }
+    @include desktop-only {
+      width: 1101px;
+    }
+    &-title {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin: 10px 40px 0px 20px;
+      h1 {
+        font-family: $title-font;
+        font-size: 28px;
+        font-weight: 500;
+        width: 250px;
+      }
+      .restaurants-cards--heart_container {
+        height: 20px;
+        width: 18px;
+        cursor: pointer;
+      }
+      @include heart;
+    }
+    &-content-wrapper {
+      @include desktop-only {
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+      }
+      @include tablet-only {
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+      }
+    }
+    &-content {
+      padding: 0px 13px;
+      display: flex;
+      flex-direction: column;
+      align-content: center;
+      gap: 13px;
+      margin-bottom: 32px;
+      &-type {
+        font-weight: 400;
+        font-size: 16px;
+        margin-top: 13px;
+        width: 335px;
+        margin-bottom: 1px;
+        margin-left: 6px;
+        &::after {
+          content: "";
+          display: block;
+          width: 40px;
+          border-bottom: 3.5px solid $clr-tertiary;
+          padding-bottom: 5px;
+        }
+      }
+      &-buttons {
+        text-decoration: none;
+        color: black;
+        border: none;
+        border-radius: 15px;
+        background: white;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        height: 68px;
+        align-content: space-between;
+        padding: 0px 10px;
+        box-shadow: 0 2px 20px -8px rgb(0 0 0 / 30%);
+        overflow: hidden;
+        &_title {
+          margin-bottom: 0px;
+          font-size: 18px;
+          margin-top: 13px;
+          text-overflow: ellipsis;
+          overflow: hidden;
+          white-space: nowrap;
+          width: 289px;
+          @include checkmark;
+        }
+        &_description {
+          margin-bottom: 0px;
+          margin-top: 4px;
+          font-size: 15px;
+          text-overflow: ellipsis;
+          overflow: hidden;
+          white-space: nowrap;
+          width: 256px;
+          margin-right: 33px;
+          @include checkmark;
+        }
+        &_price {
+          margin-right: 10px;
+          margin-top: 40px;
+          font-weight: 600;
+          width: 30px;
+        }
+        .checkmark-container {
+          width: 0px;
+          height: 100%;
+          background-color: $clr-tertiary;
+          font-weight: 900;
+          font-size: 20px;
+          color: white;
+          position: relative;
+          left: 10px;
+          @include checkmark;
+          &--icon {
+            position: relative;
+            left: 20px;
+            top: 24px;
+          }
+        }
+
+        &:hover {
+          .menu-content-buttons_description {
+            width: 186px;
+          }
+          .menu-content-buttons_title {
+            width: 220px;
+          }
+          .checkmark-container {
+            width: 60px;
+            @include checkmark-rotate;
+          }
+        }
+      }
+    }
+    &-order {
+      text-align: center;
+      &_btn {
+        @include gredient-button;
+      }
+    }
+  }
+  .menu-enchanted_only {
+    height: 1300px;
+    @include desktop-only {
+      height: 680px;
+    }
+    @include tablet-only {
+      height: 980px;
+    }
+  }
+}
+.restaurant-main--enchanted_only {
+  height: 1520px;
+  @include desktop-only {
+    height: 900px;
+  }
+  @include tablet-only {
+    height: 1200px;
+  }
+}
+.restaurant-main--img_div_enchanted_only {
+  overflow: hidden;
+  position: absolute;
+  @include desktop-only {
+    height: 900px;
+  }
+  @include tablet-only {
+    height: 1200px;
+  }
+}
+
+@include animation-menu_loading;

@@ -915,21 +915,6 @@ main .restaurants-cards--location {
   margin-top: 0px;
   font-size: 17px;
 }
-main .restaurants-cards--new {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: #99e2d0;
-  color: #299077;
-  width: 80px;
-  height: 28px;
-  position: relative;
-  left: 242px;
-  bottom: 239px;
-  border-radius: 2px;
-  font-size: 14px;
-  font-weight: 500;
-}
 main .restaurants-cards .restaurants-cards--heart_container {
   height: 27px;
   width: 23px;

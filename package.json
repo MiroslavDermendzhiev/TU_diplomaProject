@@ -17,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/MiroslavDermendzhiev/project-3/issues"
   },
-  "homepage": "https://github.com/MiroslavDermendzhiev/project-3#readme"
+  "homepage": "https://github.com/MiroslavDermendzhiev/project-3#readme",
+  "dependencies": {
+    "dotenv": "^16.0.3"
+  }
 }

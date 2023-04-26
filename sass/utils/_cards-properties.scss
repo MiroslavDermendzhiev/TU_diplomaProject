@@ -28,21 +28,21 @@
     margin-top: 0px;
     font-size: 17px;
   }
-  &--new {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: $clr-tertiary;
-    color: darken($clr-tertiary, 38);
-    width: 80px;
-    height: 28px;
-    position: relative;
-    left: 242px;
-    bottom: 239px;
-    border-radius: 2px;
-    font-size: 14px;
-    font-weight: 500;
-  }
+  // &--new {
+  //   display: flex;
+  //   justify-content: center;
+  //   align-items: center;
+  //   background: $clr-tertiary;
+  //   color: darken($clr-tertiary, 38);
+  //   width: 80px;
+  //   height: 28px;
+  //   position: relative;
+  //   left: 242px;
+  //   bottom: 239px;
+  //   border-radius: 2px;
+  //   font-size: 14px;
+  //   font-weight: 500;
+  // }
 
   .restaurants-cards--heart_container {
     height: 27px;

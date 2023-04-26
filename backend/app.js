@@ -20,10 +20,11 @@ const enableCors = (req, resp, next) => {
   next();
 };
 //connect the project to mongoDB
+
+const url = `mongodb+srv://${env.DB_USERNAME}:${env.DB_PASSWORD}@${env.DB_HOST}/?retryWrites=true&w=majority`;
+
 mongoose
-  .connect(
-    "mongodb+srv://MiroslavDermendzhiev:Miroberoe22@cluster0.5gnwjnv.mongodb.net/?retryWrites=true&w=majority"
-  )
+  .connect(url)
   .then(() => {
     console.log("Successfully connected to MongoDB Atlas!");
   })

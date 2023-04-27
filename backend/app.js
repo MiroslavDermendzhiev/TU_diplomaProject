@@ -5,6 +5,8 @@ const mongoose = require("mongoose");
 
 const Restaurant = require("./models/restaurants");
 
+const restaurantsRaute = require("./routes/restaurants");
+
 const app = express(); // where we're going to write our express app
 
 const enableCors = (req, resp, next) => {
@@ -21,6 +23,7 @@ const enableCors = (req, resp, next) => {
 };
 //connect the project to mongoDB
 
+const env = process.env;
 const url = `mongodb+srv://${env.DB_USERNAME}:${env.DB_PASSWORD}@${env.DB_HOST}/?retryWrites=true&w=majority`;
 
 mongoose
@@ -60,17 +63,18 @@ app.post("/api/restaurants", (req, res, next) => {
 });
 
 //retrieving list of restaurants from the database
-app.use("/api/restaurants", (req, res, next) => {
-  Restaurant.find()
-    .then((restaurant) => {
-      res.status(200).json(restaurant);
-    })
-    .catch((error) => {
-      res.status(400).json({
-        error: error,
-      });
-    });
-});
+// app.use("/api/restaurants", (req, res, next) => {
+//   Restaurant.find()
+//     .then((restaurant) => {
+//       res.status(200).json(restaurant);
+//     })
+//     .catch((error) => {
+//       res.status(400).json({
+//         error: error,
+//       });
+//     });
+// });
+app.use("/api/restaurants", restaurantsRaute);
 
 // retrieving one restaurant from the database
 app.get("/api/restaurants/:id", (req, res, next) => {
